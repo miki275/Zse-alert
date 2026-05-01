@@ -3,7 +3,7 @@ import requests
 import time
 from bs4 import BeautifulSoup
 fix bot
-TOKEN = "8679506052:AAGSx0N3zOrajN70WyXcVqHvkzHFGaChvQE
+TOKEN = "8679506052:AAGSx0N3zOrajN70WyXcVqHvkzHFGaChvQE"
 CHAT_ID = "8203943962"
 
 WATCHLIST = ["JDRN", "ATPL", "CKML"]
