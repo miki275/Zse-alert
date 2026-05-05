@@ -27,8 +27,7 @@ def fetch_eho():
             results.append((text, link))
 
     return results
-
-while True:
+while   True:
     try:
         posts = fetch_eho()
 
@@ -45,4 +44,7 @@ while True:
 
         time.sleep(60)
 
-    
+    except Exception as e:
+        print(e)
+        time.sleep(60)
+        
