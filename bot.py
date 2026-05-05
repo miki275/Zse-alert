@@ -45,21 +45,4 @@ while True:
 
         time.sleep(60)
 
-    except Exception as e:
-        print(e)
-        time.sleep(60)
-while True:
-    try:
-        items = fetch_eho()
-
-        for text, link in items:
-            for stock in WATCHLIST:
-                if stock in text and link not in seen:
-                    send(f"📢 {stock}\n{text}\n{link}")
-                    seen.add(link)
-
-        time.sleep(60)
-
-    except Exception as e:
-        print(e)
-        time.sleep(60)
+    
