@@ -1,11 +1,17 @@
-
+from flask import Flask
+import threading
+import os
 import requests
 import time
 from bs4 import BeautifulSoup
 #fix bot
 TOKEN = "8679506052:AAGSx0N3zOrajN70WyXcVqHvkzHFGaChvQE"
 CHAT_ID = "8203943962"
+app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return "Bot radi!"
 WATCHLIST = ["JDRN", "ATPL", "CKML"]
 
 seen = set()
@@ -47,4 +53,9 @@ while   True:
     except Exception as e:
         print(e)
         time.sleep(60)
+    def run_web():
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
+
+threading.Thread(target=run_web).start()    
         
